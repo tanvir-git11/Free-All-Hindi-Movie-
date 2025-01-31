@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page Design</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+            background-color: black;
+            font-family: Arial, sans-serif;
+        }
+        
+        /* Movie Thumbnail Grid */
+        .movie-bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 5px;
+            padding: 10px;
+        }
+
+        .movie-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .movie-bg img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        }
+
+        /* Main Content Box */
+        .main-content {
+            position: relative;
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+            width: 80%;
+            max-width: 500px;
+            z-index: 10;
+            color: white;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+        }
+
+        .btn {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: darkred;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main-content {
+                width: 90%;
+                padding: 15px;
+            }
+
+            .movie-bg {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(5, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Movie Thumbnail Grid -->
+    <div class="movie-bg">
+        <img src="https://english.mathrubhumi.com/image/contentid/policy:1.10088331:1731902754/Pushpa-2-Trailer.jpeg?$p=ab02890&f=16x10&w=852&q=0.8" onclick="redirectToAd()">
+        <img src="https://i.ytimg.com/vi/lyPgEignsvM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDlk_foBrDHbG9kz0aHfrStDPktyg" onclick="redirectToAd()">
+        <img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202412/upendra-ui-024754355-16x9_0.jpg?VersionId=wc7cL.ZVUBhqWfXOh3DoopGraK296XCy&size=690:388" onclick="redirectToAd()">
+        <img src="https://static.toiimg.com/photo/114449375.cms" onclick="redirectToAd()">
+        <img src="https://i.ytimg.com/vi/_hfgEzC7eRI/maxresdefault.jpg" onclick="redirectToAd()">
+        <img src="https://pbs.twimg.com/media/FtwVCW0aAAAho5a?format=jpg&name=4096x4096" onclick="redirectToAd()">
+        <img src="https://i.ytimg.com/vi/fNZ4e52BXyM/maxresdefault.jpg" onclick="redirectToAd()">
+        <img src="https://pic-bstarstatic.akamaized.net/ugc/d7f0116968c6bbe72b4652a37c796abc.jpg" onclick="redirectToAd()">
+        <img src="https://i.ytimg.com/vi/2zR2NqQgG3g/sddefault.jpg" onclick="redirectToAd()">
+    </div>
+
+    <!-- Main Content Box -->
+    <div class="main-content">
+        <h2>Download Now</h2>
+        <button id="downloadBtn" class="btn" onclick="handleDownload()">Download</button>
+    </div>
+
+    <script>
+        let adCount = 0;
+
+        function handleDownload() {
+            adCount++;
+            
+            window.location.href = "https://poawooptugroo.com/4/8871192"; // Redirect to ad
+        }
+
+        function redirectToAd() {
+            window.location.href = "https://poawooptugroo.com/4/8871192"; // Redirect to ad
+        }
+    </script>
+
+</body>
+</html>
